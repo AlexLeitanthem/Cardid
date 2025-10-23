@@ -31,7 +31,7 @@
 If you discover a security vulnerability, please report it responsibly:
 
 1. **DO NOT** create a public GitHub issue
-2. Email security details to: [security@example.com]
+2. Email security details to: [alexleitanthem0@icloud.com]
 3. Include:
    - Description of the vulnerability
    - Steps to reproduce
