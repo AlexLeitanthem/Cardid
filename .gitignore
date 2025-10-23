@@ -1,0 +1,79 @@
+# Build directories
+build/
+dist/
+out/
+
+# Compiled binaries
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# Object files
+*.o
+*.obj
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Test output
+test_results/
+coverage/
+*.gcov
+*.gcno
+*.gcda
+
+# Documentation
+docs/html/
+docs/latex/
+
+# Package files
+*.tar.gz
+*.zip
+*.deb
+*.rpm
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Valgrind output
+*.valgrind
+
+# Profiling output
+*.prof
+gmon.out
+
+# Backup files
+*.bak
+*.backup
+
+# Ignore everything outside the project directory
+../*
+!../cardid/
+
+# Ignore system files and user directories
+.*
+!.gitignore
+!.editorconfig
+!.clang-format
