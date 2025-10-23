@@ -25,7 +25,7 @@ When creating an issue, please include:
 
 **DO NOT** create public issues for security vulnerabilities. Instead:
 
-1. Email security details to: [security@example.com]
+1. Email security details to: alexleitanthem0@icloud.com
 2. Include steps to reproduce and potential impact
 3. We'll respond within 48 hours
 
@@ -322,11 +322,3 @@ We use [Semantic Versioning](https://semver.org/):
 - **Poor error handling** or input validation
 - **Inconsistent code style**
 - **Incomplete documentation**
-
-## 📞 Contact
-
-- **Issues**: [GitHub Issues](https://github.com/username/cardid/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/username/cardid/discussions)
-- **Security**: [Security Policy](SECURITY.md)
-
-Thank you for contributing to CardID! 🎉
