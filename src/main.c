@@ -27,7 +27,13 @@ int main(int argc, char** argv) {
         input[pos] = '\0';
     } else {
         fputs("Number: ", stdout);
-        if (!fgets(input, sizeof input, stdin)) return 1;
+        fflush(stdout);  // Ensure prompt is displayed
+        if (!fgets(input, sizeof input, stdin)) {
+            puts("Error reading input");
+            printf("Press Enter to continue...");
+            getchar();
+            return 1;
+        }
     }
 
     cardid_result res;
@@ -36,6 +42,8 @@ int main(int argc, char** argv) {
 
     if (meta.overflowed || res.length == 0 || !res.luhn_valid) {
         puts("INVALID");
+        printf("\nPress Enter to continue...");
+        getchar();
         return 0;
     }
 
@@ -45,6 +53,10 @@ int main(int argc, char** argv) {
     } else {
         puts(name);
     }
+    
+    // Pause to keep console window open
+    printf("\nPress Enter to continue...");
+    getchar();
     return 0;
 }
 

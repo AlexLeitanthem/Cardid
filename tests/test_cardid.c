@@ -50,7 +50,7 @@ static const test_case_t valid_cases[] = {
     {"6011000990139424", "DISCOVER", true},
     {"6221260000000000", "DISCOVER", true},
     {"6445644564456445", "DISCOVER", true},
-    {"6500000000000000", "DISCOVER", true},
+    {"6500000000000002", "DISCOVER", true},
 };
 
 // Invalid test cases
@@ -160,10 +160,15 @@ static int test_full_analysis() {
     printf("\n=== Testing Full Analysis ===\n");
     
     // Test valid cases
-    for (int i = 0; i < sizeof(valid_cases)/sizeof(valid_cases[0]); i++) {
+    for (size_t i = 0; i < sizeof(valid_cases)/sizeof(valid_cases[0]); i++) {
         cardid_result result;
         cardid_extract_result meta;
         cardid_analyze(valid_cases[i].input, &result, &meta);
+        
+        if (result.luhn_valid != valid_cases[i].should_be_valid) {
+            printf("FAIL: Case %zu: '%s' - Expected luhn_valid=%d, got %d\n", 
+                   i, valid_cases[i].input, valid_cases[i].should_be_valid, result.luhn_valid);
+        }
         
         TEST_ASSERT(result.luhn_valid == valid_cases[i].should_be_valid, 
                    "Luhn validation should match expected");
@@ -172,7 +177,7 @@ static int test_full_analysis() {
     }
     
     // Test invalid cases
-    for (int i = 0; i < sizeof(invalid_cases)/sizeof(invalid_cases[0]); i++) {
+    for (size_t i = 0; i < sizeof(invalid_cases)/sizeof(invalid_cases[0]); i++) {
         cardid_result result;
         cardid_extract_result meta;
         cardid_analyze(invalid_cases[i].input, &result, &meta);
