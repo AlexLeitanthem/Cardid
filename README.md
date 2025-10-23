@@ -218,12 +218,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Open source community for testing and feedback
 - Security researchers for vulnerability reports
 
-## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/username/cardid/issues)
-- **Security**: [Security Policy](SECURITY.md)
-- **Documentation**: [Wiki](https://github.com/username/cardid/wiki)
-
----
-
-**Made with ❤️ for the payment processing community**
