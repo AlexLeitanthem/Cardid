@@ -21,7 +21,7 @@ CardID is a production-ready C library that provides robust payment card validat
 
 ```bash
 # Clone the repository
-git clone https://github.com/username/cardid.git
+git clone https://github.com/LeitanthemAlex/cardid.git
 cd cardid
 
 # Build and install
